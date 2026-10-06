@@ -1,77 +1,38 @@
-# Entorno de colaboración empresarial en GitHub
+# 🚀 Innovación Digital — Entorno de Colaboración Empresarial
 
-Proyecto listo para desplegar: un entorno de colaboración para una pequeña empresa tecnológica que desarrolla una **aplicación móvil** con equipos de programación, diseño, análisis y marketing que trabajan parcialmente a distancia.
+Proyecto del **Caso 7**: startup tecnológica que desarrolla una aplicación móvil con un equipo mixto (programadores, diseñadores, analistas y marketing) que trabaja parcialmente a distancia.
 
-Cubre las tareas 31 a 35:
+**Problema:** coordinar actividades y mantener la información del proyecto actualizada.
+**Solución:** un entorno de colaboración (organización, etapas, espacio compartido, tablero, reuniones, repositorio y seguridad) + un tablero Kanban funcional incluido en este repo.
 
-| Tarea | Qué incluye este proyecto | Dónde está |
+## 📂 Estructura
+
+| Ruta | Contenido | Tarea |
 |---|---|---|
-| 31. Departamento de TI y cargos | Equipos (Teams), roles y permisos | `config/equipos.json`, `scripts/setup.sh` |
-| 32. Etapas del proyecto | 6 Milestones con fechas | `config/milestones.json` |
-| 33. Espacio colaborativo | 5 repositorios, Discussions, Wiki, plantillas | carpetas `organizacion/`, `app-movil/`, `backend-api/`, `diseno-ui/`, `documentacion/` |
-| 34. Tablero de tareas | GitHub Project (Kanban) + etiquetas + plantillas de Issues | `config/etiquetas.json`, `scripts/crear-tablero.sh` |
-| 35. Reuniones, documentos y seguridad | Calendario de reuniones, repo de documentos, 2FA, protección de ramas, Dependabot, CodeQL, secret scanning | `documentacion/`, `organizacion/.github/`, `scripts/setup.sh` |
+| [`docs/01-departamento-ti.md`](docs/01-departamento-ti.md) | Departamento de TI, cargos y funciones | 31 |
+| [`docs/02-etapas-proyecto.md`](docs/02-etapas-proyecto.md) | Etapas, entregables y cronograma | 32 |
+| [`docs/03-espacio-colaborativo.md`](docs/03-espacio-colaborativo.md) | Espacio colaborativo y canales | 33 |
+| [`docs/04-tablero-tareas.md`](docs/04-tablero-tareas.md) | Metodología del tablero Kanban | 34 |
+| [`docs/05-reuniones-repositorio-seguridad.md`](docs/05-reuniones-repositorio-seguridad.md) | Reuniones, repositorio y seguridad | 35 |
+| [`app/index.html`](app/index.html) | **Tablero Kanban funcional** (abrir en el navegador) | 34 |
+| `.github/` | Plantillas de issues, PR y CI | 33/35 |
+| `SECURITY.md`, `CONTRIBUTING.md`, `CODEOWNERS` | Políticas de seguridad y colaboración | 35 |
 
-## Estructura
+## ▶️ Cómo usar el tablero
+1. Descarga o clona el repositorio.
+2. Abre `app/index.html` en cualquier navegador (no requiere instalación).
+3. Crea tareas, arrástralas entre columnas; los datos se guardan en el navegador. Puedes exportar/importar JSON.
 
-```
-proyecto/
-├── config/                  # Datos de configuración (equipos, etiquetas, milestones)
-├── scripts/                 # Automatización con GitHub CLI
-├── organizacion/.github/    # Contenido del repo ".github" de la organización
-├── documentacion/           # Contenido del repo "documentacion"
-├── app-movil/               # Contenido inicial del repo "app-movil"
-├── backend-api/             # Contenido inicial del repo "backend-api"
-└── diseno-ui/               # Contenido inicial del repo "diseno-ui"
-```
+## 🌐 Publicar en GitHub Pages
+`Settings → Pages → Branch: main → /app` (o mueve `index.html` a `/docs`).
 
-Cada carpeta de primer nivel con código o documentos se publica como **un repositorio** de la organización.
-
-## Despliegue en 6 pasos
-
-### Requisitos previos
-- Cuenta de GitHub y una **Organization** creada (Settings → Organizations → New organization).
-- [GitHub CLI](https://cli.github.com/) instalado (`gh --version`).
-- Permisos de *Owner* en la organización.
-- Plan **Team** o superior si quieres protección de ramas en repositorios privados.
-
-### Pasos
-
+## ⬆️ Subir a GitHub
 ```bash
-# 1. Iniciar sesión con los permisos necesarios
-gh auth login
-gh auth refresh -s admin:org -s project -s repo
-
-# 2. Ejecutar la configuración (reemplaza MI-ORG por el nombre real de tu organización)
-chmod +x scripts/*.sh
-./scripts/setup.sh MI-ORG
-
-# 3. Crear el tablero Kanban
-./scripts/crear-tablero.sh MI-ORG
-
-# 4. Invitar a los miembros a sus equipos (edita primero config/miembros.csv)
-./scripts/invitar-miembros.sh MI-ORG
+git init && git add . && git commit -m "feat: entorno de colaboración Innovación Digital"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/innovacion-digital.git
+git push -u origin main
 ```
 
-### Pasos manuales (GitHub no los permite por API)
-5. **Exigir 2FA:** Organization → Settings → Authentication security → *Require two-factor authentication*.
-6. **Automatizaciones del tablero:** en el Project → ⋯ → Workflows, activar *Item added to project → Backlog*, *Pull request merged → Done*, *Item closed → Done*.
-
-Detalle completo en `documentacion/manuales/guia-despliegue.md`.
-
-## Contenido de cada repositorio
-
-| Repositorio | Propósito | Equipos con escritura |
-|---|---|---|
-| `.github` | Plantillas, normas y perfil de la organización | admin-ti |
-| `app-movil` | Código de la aplicación | desarrollo |
-| `backend-api` | Servidor y base de datos | desarrollo |
-| `diseno-ui` | Prototipos y recursos gráficos | diseno |
-| `documentacion` | Requisitos, actas, manuales | analisis, direccion |
-
-## Seguridad incluida
-
-Autenticación en dos pasos · protección de la rama `main` · `CODEOWNERS` · secret scanning y push protection · Dependabot · CodeQL · repositorios privados · `SECURITY.md` · revisión trimestral de accesos.
-
----
-*Reemplaza el texto `TU-ORG` en los archivos por el nombre de tu organización (el script `setup.sh` lo hace automáticamente).*
+## 👥 Equipo
+Ver [`docs/01-departamento-ti.md`](docs/01-departamento-ti.md). Licencia: MIT.
