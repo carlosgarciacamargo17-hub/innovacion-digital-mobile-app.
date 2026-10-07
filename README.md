@@ -1,77 +1,55 @@
-# Entorno de colaboración empresarial en GitHub
-
-Proyecto listo para desplegar: un entorno de colaboración para una pequeña empresa tecnológica que desarrolla una **aplicación móvil** con equipos de programación, diseño, análisis y marketing que trabajan parcialmente a distancia.
-
-Cubre las tareas 31 a 35:
-
-| Tarea | Qué incluye este proyecto | Dónde está |
-|---|---|---|
-| 31. Departamento de TI y cargos | Equipos (Teams), roles y permisos | `config/equipos.json`, `scripts/setup.sh` |
-| 32. Etapas del proyecto | 6 Milestones con fechas | `config/milestones.json` |
-| 33. Espacio colaborativo | 5 repositorios, Discussions, Wiki, plantillas | carpetas `organizacion/`, `app-movil/`, `backend-api/`, `diseno-ui/`, `documentacion/` |
-| 34. Tablero de tareas | GitHub Project (Kanban) + etiquetas + plantillas de Issues | `config/etiquetas.json`, `scripts/crear-tablero.sh` |
-| 35. Reuniones, documentos y seguridad | Calendario de reuniones, repo de documentos, 2FA, protección de ramas, Dependabot, CodeQL, secret scanning | `documentacion/`, `organizacion/.github/`, `scripts/setup.sh` |
-
-## Estructura
-
-```
-proyecto/
-├── config/                  # Datos de configuración (equipos, etiquetas, milestones)
-├── scripts/                 # Automatización con GitHub CLI
-├── organizacion/.github/    # Contenido del repo ".github" de la organización
-├── documentacion/           # Contenido del repo "documentacion"
-├── app-movil/               # Contenido inicial del repo "app-movil"
-├── backend-api/             # Contenido inicial del repo "backend-api"
-└── diseno-ui/               # Contenido inicial del repo "diseno-ui"
-```
-
-Cada carpeta de primer nivel con código o documentos se publica como **un repositorio** de la organización.
-
-## Despliegue en 6 pasos
-
-### Requisitos previos
-- Cuenta de GitHub y una **Organization** creada (Settings → Organizations → New organization).
-- [GitHub CLI](https://cli.github.com/) instalado (`gh --version`).
-- Permisos de *Owner* en la organización.
-- Plan **Team** o superior si quieres protección de ramas en repositorios privados.
-
-### Pasos
-
-```bash
-# 1. Iniciar sesión con los permisos necesarios
-gh auth login
-gh auth refresh -s admin:org -s project -s repo
-
-# 2. Ejecutar la configuración (reemplaza MI-ORG por el nombre real de tu organización)
-chmod +x scripts/*.sh
-./scripts/setup.sh MI-ORG
-
-# 3. Crear el tablero Kanban
-./scripts/crear-tablero.sh MI-ORG
-
-# 4. Invitar a los miembros a sus equipos (edita primero config/miembros.csv)
-./scripts/invitar-miembros.sh MI-ORG
-```
-
-### Pasos manuales (GitHub no los permite por API)
-5. **Exigir 2FA:** Organization → Settings → Authentication security → *Require two-factor authentication*.
-6. **Automatizaciones del tablero:** en el Project → ⋯ → Workflows, activar *Item added to project → Backlog*, *Pull request merged → Done*, *Item closed → Done*.
-
-Detalle completo en `documentacion/manuales/guia-despliegue.md`.
-
-## Contenido de cada repositorio
-
-| Repositorio | Propósito | Equipos con escritura |
-|---|---|---|
-| `.github` | Plantillas, normas y perfil de la organización | admin-ti |
-| `app-movil` | Código de la aplicación | desarrollo |
-| `backend-api` | Servidor y base de datos | desarrollo |
-| `diseno-ui` | Prototipos y recursos gráficos | diseno |
-| `documentacion` | Requisitos, actas, manuales | analisis, direccion |
-
-## Seguridad incluida
-
-Autenticación en dos pasos · protección de la rama `main` · `CODEOWNERS` · secret scanning y push protection · Dependabot · CodeQL · repositorios privados · `SECURITY.md` · revisión trimestral de accesos.
+# 🚀 Startup "Innovación Digital" — App Móvil
+> **Caso de Estudio N° 7:** Gestión de Proyectos de TI y Entorno Colaborativo Remoto mediante **GitHub + GitHub Projects**.
 
 ---
-*Reemplaza el texto `TU-ORG` en los archivos por el nombre de tu organización (el script `setup.sh` lo hace automáticamente).*
+
+## 📌 Descripción del Proyecto
+La Startup **Innovación Digital** desarrolla una aplicación móvil orientada a transformar la experiencia digital de sus clientes. Debido a la naturaleza remota y distribuida del equipo, se implementa una infraestructura centralizada en **GitHub** que integra la gestión ágil de tareas (Kanban), el control de versiones de código y políticas estrictas de ciberseguridad.
+
+---
+
+## 👥 Estructura del Departamento de TI y Roles Asignados
+
+Para cubrir todas las responsabilidades requeridas por el Departamento de TI, el equipo de 2 integrantes asume la siguiente segregación de funciones:
+
+| Integrante | Rol en el Proyecto | Funciones Principales |
+| :--- | :--- | :--- |
+| **Estudiante 1** *(Líder / Seguridad)* | **Gerente de TI / Analista de Sistemas / Especialista en Ciberseguridad / Admin. de Bases de Datos** | Creación y administración del repositorio, configuración de políticas de seguridad (2FA y Branch Protection Rules), diseño conceptual y arquitectura del sistema. |
+| **Estudiante 2** *(Desarrollo / UX)* | **Desarrollador Senior / Diseñador UX/UI / Soporte Técnico** | Configuración del tablero Kanban en GitHub Projects, diseño de wireframes, implementación de código base y gestión del flujo de trabajo por tareas. |
+
+---
+
+## 📋 Entorno Colaborativo y Flujo de Trabajo (Kanban)
+
+El seguimiento operativo se realiza a través de **GitHub Projects** mediante una metodología ágil estructurada en 4 columnas:
+
+1. **📋 Backlog / Pendientes:** Requisitos generales e historias de usuario por iniciar.
+2. **⚙️ En Proceso (In Progress):** Tareas activas asignadas a los desarrolladores y diseñadores.
+3. **🔍 En Revisión (In Review):** Entregables terminados que requieren revisión de código (*Peer Review*) o pruebas de calidad.
+4. **✅ Finalizado (Done):** Funcionalidades probadas e integradas a la rama principal.
+
+🔗 **Acceso directo al Tablero de Gestión:** [Ver Tablero Kanban en GitHub Projects](../../projects)
+
+---
+
+## 🛠️ Tareas Iniciales del Proyecto
+
+- **[TI / Gestión]:** Definir cronograma, etapas del proyecto y asignación de roles.
+- **[Análisis]:** Levantamiento de requerimientos funcionales para la app móvil.
+- **[Diseño UX/UI]:** Diseño de wireframes y prototipos interactivos de la app.
+- **[Desarrollo]:** Configuración del entorno de desarrollo, arquitectura base y módulo de autenticación.
+- **[Ciberseguridad]:** Definir políticas de seguridad, control de acceso (RBAC) y protección de ramas.
+
+---
+
+## 🔒 Políticas de Ciberseguridad Aplicadas
+
+En cumplimiento con los requerimientos de protección de datos e infraestructura:
+
+* **Autenticación Obligatoria:** Uso de Autenticación de Dos Factores (**2FA**) para todos los colaboradores.
+* **Protección de Ramas (`Branch Protection Rules`):** La rama principal `main` exige revisión previa de *Pull Request* antes de fusionar cualquier cambio de código.
+* **Control de Accesos (RBAC):** Permisos asignados según el principio de mínimo privilegio (*Write/Read*).
+* **Trazabilidad:** Vinculación directa entre *Issues*, *Commits* y *Pull Requests*.
+
+---
+*Proyecto académico— Universidad de Panamá.*
