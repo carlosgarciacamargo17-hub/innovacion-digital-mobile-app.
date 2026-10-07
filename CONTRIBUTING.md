@@ -8,10 +8,5 @@
 5. Espera al menos **1 aprobación** y el CI en verde.
 6. Mueve la tarjeta en el tablero según avance.
 
-## Estilo de documentación
-- Markdown, español neutro, títulos jerárquicos, tablas para comparar y diagramas Mermaid cuando ayuden.
-- Cada documento indica propietario y fecha de última revisión.
-
 ## Reglas
 - Nunca subir contraseñas, tokens ni datos personales reales.
-- Sé respetuoso: ver [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
