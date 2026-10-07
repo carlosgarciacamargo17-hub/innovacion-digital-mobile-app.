@@ -13,7 +13,9 @@ Startup **Innovación Digital** desarrolla una aplicación móvil orientada a tr
 Para cubrir todas las responsabilidades requeridas por el Departamento de TI, nuestro equipo conformado por 2 integrantes asume la siguiente segregación de funciones:
 
 | Integrante | Rol en el Proyecto | Funciones Principales |
-| **Estudiante 1** *(Líder / Seguridad)* | **Gerente de TI / Analista de Sistemas / Especialista en Ciberseguridad / Admin. de Bases de Datos** | Creación y administración del repositorio, configuración de políticas de seguridad (2FA y Branch Protection Rules), diseño conceptual y arquitectura del sistema. |
+
+| **Estudiante 1** *(Líder / Seguridad)* | **Gerente de TI / Analista de Sistemas / Especialista en Ciberseguridad / Admin. de Bases de Datos** | Creación y administración del repositorio, configuración de políticas de seguridad (2FA y Branch Protection Rules), diseño conceptual y arquitectura del sistema. 
+
 | **Estudiante 2** *(Desarrollo / UX)* | **Desarrollador Senior / Diseñador UX/UI / Soporte Técnico** | Configuración del tablero Kanban en GitHub Projects, diseño de wireframes, implementación de código base y gestión del flujo de trabajo por tareas. |
 
 ---
