@@ -1,4 +1,4 @@
-# 🚀 Startup "Innovación Digital" — App Móvil
+#  Startup "Innovación Digital" — App Móvil
 > **Caso de Estudio N° 7:** Gestión de Proyectos de TI y Entorno Colaborativo Remoto mediante **GitHub + GitHub Projects**.
 
 ---
