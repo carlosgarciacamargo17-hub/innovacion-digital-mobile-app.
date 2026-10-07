@@ -1,34 +1,35 @@
 #  Startup "Innovación Digital" — App Móvil
-> **Caso de Estudio N° 7:** Gestión de Proyectos de TI y Entorno Colaborativo Remoto mediante **GitHub + GitHub Projects**.
+> **Resolucion del caso N° 7:** Gestión de Proyectos de TI y Entorno Colaborativo Remoto mediante **GitHub + GitHub Projects**.
 
 ---
 
-## 📌 Descripción del Proyecto
-La Startup **Innovación Digital** desarrolla una aplicación móvil orientada a transformar la experiencia digital de sus clientes. Debido a la naturaleza remota y distribuida del equipo, se implementa una infraestructura centralizada en **GitHub** que integra la gestión ágil de tareas (Kanban), el control de versiones de código y políticas estrictas de ciberseguridad.
+## 📌 Descripción denuestro Proyecto
+Startup **Innovación Digital** desarrolla una aplicación móvil orientada a transformar la experiencia digital de sus clientes. Debido a la naturaleza remota y distribuida del equipo, se implementa una infraestructura centralizada en **GitHub** que integra la gestión ágil de tareas (Kanban), el control de versiones de código y políticas estrictas de ciberseguridad.
 
 ---
 
-## 👥 Estructura del Departamento de TI y Roles Asignados
+## 👥 Estructura del Departamento de TI y Roles 
 
-Para cubrir todas las responsabilidades requeridas por el Departamento de TI, el equipo de 2 integrantes asume la siguiente segregación de funciones:
+Para cubrir todas las responsabilidades requeridas por el Departamento de TI, nuestro equipo conformado por 2 integrantes asume la siguiente segregación de funciones:
 
 | Integrante | Rol en el Proyecto | Funciones Principales |
-| :--- | :--- | :--- |
 | **Estudiante 1** *(Líder / Seguridad)* | **Gerente de TI / Analista de Sistemas / Especialista en Ciberseguridad / Admin. de Bases de Datos** | Creación y administración del repositorio, configuración de políticas de seguridad (2FA y Branch Protection Rules), diseño conceptual y arquitectura del sistema. |
 | **Estudiante 2** *(Desarrollo / UX)* | **Desarrollador Senior / Diseñador UX/UI / Soporte Técnico** | Configuración del tablero Kanban en GitHub Projects, diseño de wireframes, implementación de código base y gestión del flujo de trabajo por tareas. |
 
 ---
 
-## 📋 Entorno Colaborativo y Flujo de Trabajo (Kanban)
+## 📋 Entorno Colaborativo y Flujo de Trabajo mediante (Kanban)
 
-El seguimiento operativo se realiza a través de **GitHub Projects** mediante una metodología ágil estructurada en 4 columnas:
+El seguimiento operativo se realiza a través de **GitHub Projects** mediante una metodología ágil:
+como funciona?
 
-1. **📋 Backlog / Pendientes:** Requisitos generales e historias de usuario por iniciar.
-2. **⚙️ En Proceso (In Progress):** Tareas activas asignadas a los desarrolladores y diseñadores.
-3. **🔍 En Revisión (In Review):** Entregables terminados que requieren revisión de código (*Peer Review*) o pruebas de calidad.
-4. **✅ Finalizado (Done):** Funcionalidades probadas e integradas a la rama principal.
+1. **📋 Backlog / Pendientes:** Requisitos generales e historias de usuario por iniciar, aquí se pondrán todas las tareas y responsabilidades que el equipo o departamento debe cumplir tanto las generales como las especificas de cada rol  y se estarán constantemente definiendo el estado de cada una para que todos puedan seguir el proceso y desempeño del equipo.
+   
+2. **⚙️ En Proceso (In Progress):** Tareas activas asignadas que ya se estan realizando.
+4. **🔍 En Revisión (In Review):** Entregables terminados que requieren revisión o pruebas de calidad.
+5. **✅ Finalizado (Done):** Funcionalidades probadas e integradas a la rama principal.
 
-🔗 **Acceso directo al Tablero de Gestión:** [Ver Tablero Kanban en GitHub Projects](../../projects)
+
 
 ---
 
